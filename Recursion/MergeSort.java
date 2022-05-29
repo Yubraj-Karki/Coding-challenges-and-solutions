@@ -14,6 +14,7 @@ public class MergeSort {
             return arr;
         }
 
+        // Dividing the arrays into two halves
         int mid = arr.length / 2;
 
         int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
@@ -22,6 +23,7 @@ public class MergeSort {
         return merge(left, right);
     }
 
+    // Method to merge and the resulting arrays after comparisons
     private static int[] merge(int[] left, int[] right) {
 
         int[] mix = new int[left.length + right.length];
