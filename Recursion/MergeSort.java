@@ -23,6 +23,7 @@ public class MergeSort {
     }
 
     private static int[] merge(int[] left, int[] right) {
+
         int[] mix = new int[left.length + right.length];
 
         int i = 0;
@@ -40,7 +41,7 @@ public class MergeSort {
             k++;
         }
 
-        // dealing with the remaining arrays the
+        // dealing with the remaining arrays
 
         while (i < left.length) {
             mix[k] = left[i];
