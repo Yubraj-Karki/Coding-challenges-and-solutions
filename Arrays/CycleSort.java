@@ -8,6 +8,7 @@ class CycleSort {
         int[] arr = { 5, 4, 3, 2, 1 };
 
         cycleSort(arr);
+
         System.out.println(Arrays.toString(arr));
 
     }
@@ -17,6 +18,8 @@ class CycleSort {
 
             int correctIndex = arr[i] - 1;
 
+            // If current element is not at its correct index,
+            // we wanna swap it to its correct index
             if (arr[i] != correctIndex) {
                 swap(arr, i, correctIndex);
             }
