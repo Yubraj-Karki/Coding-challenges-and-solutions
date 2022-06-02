@@ -5,7 +5,7 @@ import java.util.Arrays;
 class CycleSort {
     public static void main(String[] args) {
 
-        int[] arr = { 5, 4, 3, 2, 1 };
+        int[] arr = { 3, 4, 5, 2, 1 };
 
         cycleSort(arr);
 
@@ -14,14 +14,19 @@ class CycleSort {
     }
 
     public static void cycleSort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+
+        int i = 0;
+
+        while (i < arr.length) {
 
             int correctIndex = arr[i] - 1;
 
             // If current element is not at its correct index,
             // we wanna swap it to its correct index
-            if (arr[i] != correctIndex) {
+            if (arr[i] != arr[correctIndex]) {
                 swap(arr, i, correctIndex);
+            } else {
+                i++;
             }
         }
 
